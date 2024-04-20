@@ -56,6 +56,14 @@ function displayForecast(response) {
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
+      let maxTemperature = Math.round(forecastDay.temperature.maximum);
+      let container = document.querySelector(".container");
+      if (maxTemperature > 20) {
+        container.style.background = "linear-gradient(243deg, rgb(255, 253, 221) 13.4%, rgb(248, 215, 215) 82.1%)"; // Set the background color to red
+      } else {
+        container.style.background = "linear-gradient(113.5deg, rgb(234, 234, 234) 22.3%, rgb(201, 234, 211) 56.6%, rgb(255, 180, 189) 90.9%)";
+      }
+
       forecastHTML =
         forecastHTML +
         `
@@ -80,9 +88,11 @@ function displayForecast(response) {
       </div>
   `;
     }
+
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+
 }
 
 function getForecast(coordinates) {
@@ -155,23 +165,23 @@ function handleSubmit(event) {
 let form = document.querySelector("#form");
 form.addEventListener("submit", handleSubmit);
 
-function currentPosition(position) {
-  lon = position.coords.longitude;
-  lat = position.coords.latitude;
+// function currentPosition(position) {
+//   lon = position.coords.longitude;
+//   lat = position.coords.latitude;
 
-  let apiKey = "b75146af46et20c8d83f2ao3006e4a7d";
-  let units = "metric";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${position.coords.longitude}&lat=${position.coords.latitude}&key=${apiKey}&units=${units}`;
+//   let apiKey = "b75146af46et20c8d83f2ao3006e4a7d";
+//   let units = "metric";
+//   let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${position.coords.longitude}&lat=${position.coords.latitude}&key=${apiKey}&units=${units}`;
 
-  //axios pulls all the data from displayTemp but for the current location.
-  https: axios.get(apiUrl).then(displayTemp);
-}
+//   //axios pulls all the data from displayTemp but for the current location.
+//   https: axios.get(apiUrl).then(displayTemp);
+// }
 
-//this function uses the geolocation navigator to find the user's current lon and lat
-function searchPosition(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(currentPosition);
-}
+// //this function uses the geolocation navigator to find the user's current lon and lat
+// function searchPosition(event) {
+//   event.preventDefault();
+//   navigator.geolocation.getCurrentPosition(currentPosition);
+// }
 
 // when the form is used and the city is submitted, the event listener calls the showCityName function.
 
