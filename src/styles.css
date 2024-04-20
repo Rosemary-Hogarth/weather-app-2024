@@ -1,6 +1,6 @@
 body {
   font-family: "Poppins", sans-serif;
-  background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);
+  background-color: #F8F3F7;
   margin: 0;
   padding: 0;
 }
@@ -10,7 +10,7 @@ body {
   padding-bottom: 0;
   margin: 64px auto;
   border-radius: 10px;
-  background:  #f7f7f7;
+  background: linear-gradient(113.5deg, rgb(234, 234, 234) 22.3%, rgb(201, 234, 211) 56.6%, rgb(255, 180, 189) 90.9%);
   color: #5a6275;
   max-width: 500px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
