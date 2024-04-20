@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700&family=Merriweather:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/d9461d41d7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form class="box-button" id="form">
+        <div class="row">
+          <div class="col-8">
+            <input
+              type="search"
+              class="form-control"
+              placeholder="Find your city"
+              id="city-search"
+            />
+          </div>
+          <div class="col-4">
+            <input type="submit" class="button" value="Search" />
+          </div>
+          <!-- <div class="col-1">
+            <button id="current-location" class="current">📍</button>
+          </div> -->
+        </div>
+      </form>
+
+      <h1 id="date">12:45 | Thursday, 7. September</h1>
+      <h2 id="cityInput">Berlin</h2>
+      <div id="current-description" class="weather-description">Sunny</div>
+      <br />
+      <div class="middle-section">
+        <div class="row">
+          <div class="col-9">
+            <img
+              src=""
+              id="icon"
+              class="fa-solid fa-circle sun-icon1"
+              width="150"
+            />
+          </div>
+            <span class="degrees-celsius">
+        <thin id="temperature">
+          <li class="degrees" id="temp"><p>30</p></li></thin
+        >
+        <li class="degrees">
+          <p class="celsius" id="celsius-link">°C</p>
+        </li>
+      </ul>
+      </span>
+        </div>
+      </div>
+
+      <ul>
+        <li>
+        <i class="fa-solid fa-droplet"></i>
+        <span class ="humidity" id="humidity">Humidity: 45%</span>
+        </li>
+    <li><i class="fa-solid fa-temperature-quarter"></i>
+        <span class="pressure" id="pressure">Pressure: 900</span></li>
+       <li><i class="fa-solid fa-wind"></i>
+        <span class="wind" id="wind">2 km/h</span></li>
+      </ul>
+
+
+      <hr />
+      <div class="forecast" id="forecast">
+        <div class="col-2">
+          <div class="weather-forecast-date">${formatDay(forecastDay.time)}</div>
+
+          <img
+            src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+              forecastDay.condition.icon
+            }.png"
+            alt=""
+            class="forecast-icon"
+          />
+          <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-max">${Math.round(
+            forecastDay.temperature.maximum
+          )}°</span>
+            <span class="weather-forecast-temperature-min">${Math.round(
+              forecastDay.temperature.minimum
+            )}°</span>
+          </div>
+        </div>
+    </div>
+
+  <div class="name">
+      <a
+        href="https://github.com/Rosemary-Hogarth/project-6"
+        target="_blank"
+        class="code"
+        >Open-source code</a
+      >
+      by Rosemary Hogarth
+   </div>
+
+    <script src="src/index.js"></script>
+  </body>
+
+</html>
