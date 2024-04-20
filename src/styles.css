@@ -190,12 +190,13 @@ p {
     font-size: 10px;
     margin: 0 auto;
   }
+}
 
-  /* .form-control {
-    width: 200px;
+@media(max-width: 768px) {
+  .container {
+    margin: 20px auto;
   }
-
-  .box-button {
-    width: 100%;
+  .button {
+    width: auto;
   }
-} */
+}
