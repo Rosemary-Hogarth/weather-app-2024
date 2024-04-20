@@ -171,8 +171,6 @@ p {
   font-weight: 200;
 }
 @media (max-width: 1200px) {
-
-
   h4 {
     font-size: 40px;
   }
@@ -183,14 +181,6 @@ p {
     padding: 10px 20px 0 4px;
   }
 }
-@media (max-width: 700px) {
-
-
-  .humidity, .pressure, .wind {
-    font-size: 10px;
-    margin: 0 auto;
-  }
-}
 
 @media(max-width: 768px) {
   .container {
@@ -198,5 +188,10 @@ p {
   }
   .button {
     width: auto;
+  }
+
+  .humidity, .pressure, .wind {
+    font-size: 10px;
+    margin: 0 auto;
   }
 }
