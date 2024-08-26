@@ -26,6 +26,8 @@
   </head>
   <body>
     <div class="container">
+
+      <!--Search component-->
       <form class="box-button" id="form">
         <div class="row">
           <div class="col-8">
@@ -39,19 +41,22 @@
           <div class="col-4">
             <input type="submit" class="button" value="Search" />
           </div>
-          <!-- <div class="col-1">
-            <button id="current-location" class="current">📍</button>
-          </div> -->
         </div>
       </form>
 
+      <!--Date component-->
       <h1 id="date">12:45 | Thursday, 7. September</h1>
+
+      <!--CityWeather component-->
       <h2 id="cityInput">Berlin</h2>
       <div id="current-description" class="weather-description">Sunny</div>
+
+      <!--CurrentWeather component-->
       <br />
       <div class="middle-section">
         <div class="row">
           <div class="col-9">
+      <!--WeatherIcon component-->
             <img
               src=""
               id="icon"
@@ -71,6 +76,7 @@
         </div>
       </div>
 
+    <!--Weather-details component-->
       <ul>
         <li>
         <i class="fa-solid fa-droplet"></i>
@@ -78,11 +84,12 @@
         </li>
     <li><i class="fa-solid fa-temperature-quarter"></i>
         <span class="pressure" id="pressure">Pressure: 900</span></li>
-       <li><i class="fa-solid fa-wind"></i>
+        <li><i class="fa-solid fa-wind"></i>
         <span class="wind" id="wind">2 km/h</span></li>
       </ul>
 
 
+      <!--forecast component-->
       <hr />
       <div class="forecast" id="forecast">
         <div class="col-2">
@@ -106,15 +113,16 @@
         </div>
     </div>
 
-  <div class="name">
-      <a
-        href="https://github.com/Rosemary-Hogarth/project-6"
-        target="_blank"
-        class="code"
-        >Open-source code</a
-      >
-      by Rosemary Hogarth
-   </div>
+    <!--Footer component-->
+    <div class="name">
+        <a
+          href="https://github.com/Rosemary-Hogarth/project-6"
+          target="_blank"
+          class="code"
+          >Open-source code</a
+        >
+        by Rosemary Hogarth
+    </div>
 
     <script src="src/index.js"></script>
   </body>

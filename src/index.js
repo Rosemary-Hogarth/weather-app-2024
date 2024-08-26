@@ -205,16 +205,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Berlin");
-
-
-
-// function displayFahrenheitTemperature(event) {
-//   event.preventDefault();
-//   let temperatureElement = document.querySelector("#temperature");
-//   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-
-//   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-// }
-
-// let fahrenheitLink = document.querySelector("#fahrenheit-link");
-// fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
