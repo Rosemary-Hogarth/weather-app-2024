@@ -117,20 +117,6 @@ hr {
   color: #f0b91a;
 }
 
-.temps-max {
-  font-size: 13px;
-  text-align: center;
-}
-
-.temps-min {
-  font-weight: 200;
-  font-size: 13px;
-  text-align: center;
-}
-.icons {
-  font-size: 30px;
-  text-align: center;
-}
 
 .cloud-icon,
 .cloud-rain-icon {
